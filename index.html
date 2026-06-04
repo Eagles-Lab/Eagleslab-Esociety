@@ -326,65 +326,6 @@
         margin: 0.5em 0;
       }
 
-      /* 科技感粒子动画 */
-      .particle {
-        position: absolute;
-        width: 4px;
-        height: 4px;
-        background: #e94560;
-        border-radius: 50%;
-        opacity: 0.6;
-      }
-      .particle-1 {
-        top: 20%;
-        left: 10%;
-        animation: float-particle 8s ease-in-out infinite;
-        box-shadow: 0 0 10px #e94560, 0 0 20px #e94560;
-      }
-      .particle-2 {
-        top: 60%;
-        right: 15%;
-        animation: float-particle 10s ease-in-out infinite reverse;
-        background: #00d4ff;
-        box-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff;
-      }
-      .particle-3 {
-        bottom: 30%;
-        left: 40%;
-        animation: float-particle 12s ease-in-out infinite;
-        background: #7b2ff7;
-        box-shadow: 0 0 10px #7b2ff7, 0 0 20px #7b2ff7;
-      }
-      @keyframes float-particle {
-        0%, 100% { transform: translate(0, 0) scale(1); }
-        25% { transform: translate(50px, -30px) scale(1.5); }
-        50% { transform: translate(-20px, 40px) scale(0.8); }
-        75% { transform: translate(30px, 20px) scale(1.2); }
-      }
-
-      /* 发光效果 */
-      .glow-effect {
-        box-shadow: 0 0 20px rgba(233, 69, 96, 0.3), 0 0 40px rgba(233, 69, 96, 0.1);
-      }
-      .glow-effect:hover {
-        box-shadow: 0 0 30px rgba(233, 69, 96, 0.5), 0 0 60px rgba(233, 69, 96, 0.2);
-      }
-
-      /* 扫描线效果 */
-      .scan-line::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 2px;
-        background: linear-gradient(90deg, transparent, #e94560, transparent);
-        animation: scan 3s linear infinite;
-      }
-      @keyframes scan {
-        0% { transform: translateY(0); }
-        100% { transform: translateY(100vh); }
-      }
     </style>
 </head>
 <body class="bg-zinc-50 dark:bg-[#08080c] text-zinc-900 dark:text-white transition-colors duration-300 min-h-screen">
@@ -785,65 +726,56 @@
 
     <!-- Main Content -->
     <main class="pt-20 pb-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <!-- Hero Section - 科技感设计 -->
+        <!-- Hero Section - 优雅科技感 -->
         <section class="mb-12">
-            <div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#0a0a1a] via-[#0d1b2a] to-[#1b2838]">
-                <!-- 科技感背景装饰 -->
+            <div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+                <!-- 简约背景装饰 -->
                 <div class="absolute inset-0">
-                    <!-- 网格线条 -->
-                    <div class="absolute inset-0 opacity-10" style="background-image: linear-gradient(rgba(233, 69, 96, 0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(233, 69, 96, 0.3) 1px, transparent 1px); background-size: 60px 60px;"></div>
-                    <!-- 发光球体 -->
-                    <div class="absolute top-0 right-0 w-96 h-96 bg-[#e94560] rounded-full blur-[120px] opacity-20 animate-pulse"></div>
-                    <div class="absolute bottom-0 left-0 w-80 h-80 bg-[#00d4ff] rounded-full blur-[100px] opacity-15 animate-pulse" style="animation-delay: 1s;"></div>
-                    <div class="absolute top-1/2 left-1/2 w-64 h-64 bg-[#7b2ff7] rounded-full blur-[80px] opacity-10 animate-pulse" style="animation-delay: 2s;"></div>
-                    <!-- 浮动粒子效果 -->
-                    <div class="absolute inset-0 overflow-hidden">
-                        <div class="particle particle-1"></div>
-                        <div class="particle particle-2"></div>
-                        <div class="particle particle-3"></div>
-                    </div>
+                    <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 40px 40px;"></div>
+                    <div class="absolute top-0 right-0 w-96 h-96 bg-blue-500 rounded-full blur-[120px] opacity-10"></div>
+                    <div class="absolute bottom-0 left-0 w-80 h-80 bg-purple-500 rounded-full blur-[100px] opacity-10"></div>
                 </div>
 
                 <div class="relative z-10 p-8 lg:p-12">
-                    <div class="flex flex-col lg:flex-row items-center gap-10">
+                    <div class="flex flex-col lg:flex-row items-center gap-12">
                         <!-- 左侧内容 -->
                         <div class="flex-1 text-center lg:text-left">
                             <!-- 品牌标识 -->
-                            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#e94560]/30 bg-[#e94560]/10 mb-6">
-                                <div class="w-2 h-2 rounded-full bg-[#e94560] animate-pulse"></div>
-                                <span class="text-xs font-bold text-[#e94560] uppercase tracking-widest">Eagles Lab</span>
+                            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 text-white/80 text-xs font-medium mb-6">
+                                <i data-lucide="shield" size="12"></i>
+                                <span>Eagles Lab</span>
                             </div>
 
                             <!-- 主标题 -->
                             <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-4 leading-tight">
                                 技术交流<br>
-                                <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#e94560] via-[#ff6b6b] to-[#00d4ff]">共同成长</span>
+                                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">共同成长</span>
                             </h1>
 
                             <!-- 描述 -->
                             <p class="text-base md:text-lg text-white/60 max-w-xl mb-8 leading-relaxed">
                                 专注网络安全、运维开发、面试经验、大厂动态、行业形势分析<br>
-                                <span class="text-[#00d4ff]">汇聚实战经验，助力职业成长</span>
+                                汇聚实战经验，助力职业成长
                             </p>
 
                             <!-- 统计数据 -->
                             <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
-                                <div class="text-center p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
-                                    <div class="text-2xl font-black text-[#e94560] mb-1" id="stat-posts-hero">-</div>
+                                <div class="text-center p-4 rounded-xl bg-white/5 border border-white/10">
+                                    <div class="text-2xl font-black text-white mb-1" id="stat-posts-hero">-</div>
                                     <div class="text-xs text-white/50 font-medium">帖子</div>
                                 </div>
-                                <div class="text-center p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
-                                    <div class="text-2xl font-black text-[#00d4ff] mb-1" id="stat-users-hero">-</div>
+                                <div class="text-center p-4 rounded-xl bg-white/5 border border-white/10">
+                                    <div class="text-2xl font-black text-white mb-1" id="stat-users-hero">-</div>
                                     <div class="text-xs text-white/50 font-medium">用户</div>
                                 </div>
-                                <div class="text-center p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
-                                    <div class="text-2xl font-black text-[#7b2ff7] mb-1">6</div>
+                                <div class="text-center p-4 rounded-xl bg-white/5 border border-white/10">
+                                    <div class="text-2xl font-black text-white mb-1">6</div>
                                     <div class="text-xs text-white/50 font-medium">板块</div>
                                 </div>
-                                <div class="text-center p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
+                                <div class="text-center p-4 rounded-xl bg-white/5 border border-white/10">
                                     <div class="flex items-center justify-center gap-2 mb-1">
-                                        <span class="w-2 h-2 rounded-full bg-[#00ff88] animate-pulse"></span>
-                                        <span class="text-2xl font-black text-[#00ff88]" id="online-count-hero">-</span>
+                                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                                        <span class="text-2xl font-black text-white" id="online-count-hero">-</span>
                                     </div>
                                     <div class="text-xs text-white/50 font-medium">在线</div>
                                 </div>
@@ -851,37 +783,30 @@
 
                             <!-- CTA 按钮 -->
                             <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
-                                <button onclick="showNewPostModal()" class="group px-8 py-4 rounded-xl bg-gradient-to-r from-[#e94560] to-[#ff6b6b] text-white font-bold text-sm hover:shadow-2xl hover:shadow-[#e94560]/40 transition-all hover:-translate-y-0.5">
-                                    <i data-lucide="edit-3" size="16" class="inline mr-2 group-hover:rotate-12 transition-transform"></i>
+                                <button onclick="showNewPostModal()" class="px-6 py-3 rounded-xl bg-white text-slate-900 font-bold text-sm hover:bg-white/90 transition-all shadow-lg">
+                                    <i data-lucide="edit-3" size="16" class="inline mr-2"></i>
                                     发布帖子
                                 </button>
-                                <button onclick="document.getElementById('posts-section').scrollIntoView({behavior: 'smooth'})" class="px-8 py-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 text-white font-bold text-sm hover:bg-white/20 transition-all">
+                                <button onclick="document.getElementById('posts-section').scrollIntoView({behavior: 'smooth'})" class="px-6 py-3 rounded-xl bg-white/10 border border-white/20 text-white font-bold text-sm hover:bg-white/20 transition-all">
                                     <i data-lucide="compass" size="16" class="inline mr-2"></i>
                                     浏览内容
                                 </button>
                             </div>
                         </div>
 
-                        <!-- 右侧科技感装饰 -->
-                        <div class="hidden lg:block lg:w-96 flex-shrink-0">
+                        <!-- 右侧装饰 -->
+                        <div class="hidden lg:block lg:w-72 flex-shrink-0">
                             <div class="relative">
-                                <!-- 主图标 -->
-                                <div class="relative w-48 h-48 mx-auto">
-                                    <div class="absolute inset-0 bg-gradient-to-br from-[#e94560] to-[#ff6b6b] rounded-3xl rotate-6 opacity-20 blur-xl"></div>
-                                    <div class="relative w-full h-full rounded-3xl bg-gradient-to-br from-[#e94560] to-[#ff6b6b] flex items-center justify-center shadow-2xl shadow-[#e94560]/40">
-                                        <i data-lucide="shield" size="80" class="text-white"></i>
-                                    </div>
-                                    <!-- 发光效果 -->
-                                    <div class="absolute inset-0 rounded-3xl bg-gradient-to-br from-[#e94560] to-[#ff6b6b] opacity-30 blur-2xl animate-pulse"></div>
+                                <div class="w-40 h-40 mx-auto rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center shadow-2xl shadow-blue-500/30">
+                                    <i data-lucide="shield" size="64" class="text-white"></i>
                                 </div>
-                                <!-- 浮动标签 -->
-                                <div class="absolute -top-4 -right-4 px-4 py-2 rounded-full bg-[#00d4ff]/20 border border-[#00d4ff]/30 text-[#00d4ff] text-xs font-bold animate-bounce">
+                                <div class="absolute -top-2 -right-2 px-3 py-1.5 rounded-full bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 text-xs font-bold">
                                     安全
                                 </div>
-                                <div class="absolute -bottom-4 -left-4 px-4 py-2 rounded-full bg-[#7b2ff7]/20 border border-[#7b2ff7]/30 text-[#7b2ff7] text-xs font-bold animate-bounce" style="animation-delay: 0.5s;">
+                                <div class="absolute -bottom-2 -left-2 px-3 py-1.5 rounded-full bg-amber-500/20 border border-amber-500/30 text-amber-400 text-xs font-bold">
                                     运维
                                 </div>
-                                <div class="absolute top-1/2 -right-8 px-4 py-2 rounded-full bg-[#00ff88]/20 border border-[#00ff88]/30 text-[#00ff88] text-xs font-bold animate-bounce" style="animation-delay: 1s;">
+                                <div class="absolute top-1/2 -right-4 px-3 py-1.5 rounded-full bg-violet-500/20 border border-violet-500/30 text-violet-400 text-xs font-bold">
                                     面经
                                 </div>
                             </div>
@@ -891,14 +816,14 @@
             </div>
         </section>
 
-        <!-- 板块分类 - 科技感设计 -->
+        <!-- 板块分类 -->
         <section class="mb-10">
             <div class="flex items-center justify-between mb-6">
                 <div>
                     <h2 class="text-xl font-black text-zinc-900 dark:text-white mb-1">板块分类</h2>
                     <p class="text-sm text-zinc-500">选择你感兴趣的领域</p>
                 </div>
-                <button onclick="filterByCategory('all')" class="text-sm font-bold text-[#e94560] hover:text-[#d63d56] transition-colors">
+                <button onclick="filterByCategory('all')" class="text-sm font-bold text-blue-600 hover:text-blue-700 transition-colors">
                     查看全部 →
                 </button>
             </div>
@@ -1116,13 +1041,13 @@
             }
         }
 
-        // 渲染主页板块卡片 - 科技感设计
+        // 渲染主页板块卡片 - 简洁设计
         function renderCategoryCards() {
             const container = document.getElementById('category-cards');
             if (!container) return;
 
             const categoryConfig = {
-                security: { icon: 'shield', color: '#e94560', desc: '网安技术' },
+                security: { icon: 'shield', color: '#ef4444', desc: '网安技术' },
                 devops: { icon: 'settings', color: '#f59e0b', desc: '运维实践' },
                 interview: { icon: 'file-text', color: '#10b981', desc: '面试经验' },
                 bigtech: { icon: 'building', color: '#3b82f6', desc: '大厂动态' },
@@ -1135,18 +1060,12 @@
             Object.entries(CATEGORIES).forEach(([id, cat]) => {
                 const config = categoryConfig[id] || categoryConfig.other;
                 html += `
-                    <button onclick="filterByCategory('${id}')" class="group relative bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-white/10 rounded-xl p-5 text-center hover:shadow-2xl hover:border-transparent transition-all duration-300 hover:-translate-y-1 overflow-hidden" data-cat="${id}">
-                        <!-- 发光边框效果 -->
-                        <div class="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" style="background: linear-gradient(135deg, ${config.color}30, transparent, ${config.color}10);"></div>
-                        <div class="absolute inset-[1px] rounded-xl bg-white dark:bg-zinc-900 z-0"></div>
-
-                        <div class="relative z-10">
-                            <div class="w-14 h-14 rounded-xl mx-auto mb-3 flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg" style="background: linear-gradient(135deg, ${config.color}15, ${config.color}05); color: ${config.color}; box-shadow: 0 0 0 0 ${config.color}00;">
-                                <i data-lucide="${cat.icon}" size="28"></i>
-                            </div>
-                            <h4 class="text-sm font-bold text-zinc-900 dark:text-white mb-1">${cat.name}</h4>
-                            <p class="text-[11px] text-zinc-500 dark:text-zinc-400">${config.desc}</p>
+                    <button onclick="filterByCategory('${id}')" class="group bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-white/10 rounded-xl p-5 text-center hover:shadow-lg hover:border-zinc-300 dark:hover:border-white/20 transition-all duration-200 hover:-translate-y-0.5" data-cat="${id}">
+                        <div class="w-12 h-12 rounded-xl mx-auto mb-3 flex items-center justify-center transition-transform duration-200 group-hover:scale-110" style="background: ${config.color}10; color: ${config.color}">
+                            <i data-lucide="${cat.icon}" size="24"></i>
                         </div>
+                        <h4 class="text-sm font-bold text-zinc-900 dark:text-white mb-1">${cat.name}</h4>
+                        <p class="text-[11px] text-zinc-500 dark:text-zinc-400">${config.desc}</p>
                     </button>
                 `;
             });
