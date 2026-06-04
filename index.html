@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eagles Lab 技术社区 - SRE · 网安 · 运维</title>
-    <meta name="description" content="Eagles Lab 技术社区留言板，专注SRE、网络安全、运维、开发等技术方向，打造高质量技术交流平台">
+    <title>Eagles Lab · 英格科技学生社区</title>
+    <meta name="description" content="Eagles Lab 英格科技学生社区 - 网安、运维、面经、大厂、形势讨论，打造高质量技术交流平台">
 
     <!-- Tailwind CSS -->
     <script src="assets/vendor/tailwind.min.js"></script>
@@ -358,7 +358,7 @@
                         </div>
                         <div>
                             <h1 class="text-lg font-black tracking-tight">
-                                <span class="text-gradient">ITLab</span>
+                                <span class="text-gradient">Eagle</span>
                                 <span class="text-zinc-900 dark:text-white"> 社区</span>
                             </h1>
                             <p class="text-[10px] text-zinc-400 font-bold uppercase tracking-[0.2em]">SRE · 网安 · 运维 · 开发</p>
@@ -481,24 +481,39 @@
         </div>
     </header>
 
-    <!-- Login Modal -->
-    <div id="login-modal" class="hidden fixed inset-0 z-[100] bg-black/60 backdrop-blur-sm flex items-center justify-center px-4">
-        <div class="w-full max-w-sm bg-white dark:bg-zinc-900 rounded-3xl shadow-2xl overflow-hidden border border-zinc-200 dark:border-white/10 animate-fade-in-up">
-            <div class="relative p-8 text-center bg-gradient-to-br from-blue-500 via-teal-500 to-green-500">
-                <div class="w-16 h-16 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center mx-auto mb-4">
-                    <i data-lucide="terminal" size="32" class="text-white"></i>
+    <!-- Login Modal - 高级设计 -->
+    <div id="login-modal" class="hidden fixed inset-0 z-[100] bg-black/70 backdrop-blur-md flex items-center justify-center px-4">
+        <div class="w-full max-w-md bg-white dark:bg-zinc-900 rounded-3xl shadow-2xl overflow-hidden border border-zinc-200 dark:border-white/10 animate-fade-in-up">
+            <!-- 顶部装饰 -->
+            <div class="relative h-32 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 overflow-hidden">
+                <div class="absolute inset-0 opacity-30">
+                    <div class="absolute top-0 left-0 w-48 h-48 bg-blue-500 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+                    <div class="absolute bottom-0 right-0 w-40 h-40 bg-purple-500 rounded-full blur-3xl translate-x-1/3 translate-y-1/3"></div>
                 </div>
-                <h2 class="text-2xl font-black text-white mb-1">欢迎加入 ITLab</h2>
-                <p class="text-sm text-white/80">Eagles Lab 技术社区</p>
+                <div class="relative z-10 flex items-center justify-center h-full">
+                    <div class="text-center">
+                        <div class="w-16 h-16 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center mx-auto mb-3">
+                            <i data-lucide="shield" size="32" class="text-white"></i>
+                        </div>
+                        <h2 class="text-xl font-black text-white">加入 Eagles Lab</h2>
+                    </div>
+                </div>
             </div>
-            <div class="p-6 space-y-4">
-                <p class="text-xs text-zinc-500 text-center">使用 GitHub 账号登录，即可参与技术交流</p>
-                <button onclick="githubLogin()" class="w-full py-3.5 rounded-xl bg-[#24292f] dark:bg-white/10 text-white font-bold text-sm hover:bg-[#2f363d] dark:hover:bg-white/20 transition-all flex items-center justify-center gap-3 shadow-lg hover:shadow-xl hover:scale-[1.02]">
-                    <svg class="w-5 h-5" fill="white" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            <div class="p-8">
+                <p class="text-sm text-zinc-600 dark:text-zinc-400 text-center mb-6 leading-relaxed">
+                    使用 GitHub 账号登录<br>
+                    即可参与技术讨论和经验分享
+                </p>
+                <button onclick="githubLogin()" class="w-full py-4 rounded-2xl bg-gradient-to-r from-slate-800 to-slate-900 dark:from-white dark:to-white text-white dark:text-slate-900 font-bold text-sm hover:shadow-2xl transition-all flex items-center justify-center gap-3 group">
+                    <svg class="w-5 h-5 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                     使用 GitHub 登录
                 </button>
-                <div id="login-error" class="hidden text-red-500 text-xs font-bold text-center"></div>
-                <button onclick="hideLoginModal()" class="w-full py-2 text-xs text-zinc-400 hover:text-zinc-600 dark:hover:text-white transition-colors">稍后再看</button>
+                <div id="login-error" class="hidden text-red-500 text-xs font-bold text-center mt-4"></div>
+                <div class="mt-6 pt-6 border-t border-zinc-200 dark:border-white/10">
+                    <button onclick="hideLoginModal()" class="w-full py-2 text-sm text-zinc-500 hover:text-zinc-700 dark:hover:text-white transition-colors font-medium">
+                        稍后再看
+                    </button>
+                </div>
             </div>
         </div>
     </div>
@@ -710,39 +725,80 @@
 
     <!-- Main Content -->
     <main class="pt-20 pb-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <!-- Hero Section -->
-        <div class="relative mb-10 p-8 md:p-12 rounded-3xl bg-gradient-to-br from-blue-500 via-teal-500 to-green-500 overflow-hidden shimmer">
-            <div class="absolute inset-0 bg-black/10"></div>
-            <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-32 translate-x-32"></div>
-            <div class="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full translate-y-24 -translate-x-24"></div>
-            <div class="relative z-10 text-center text-white">
-                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-sm font-bold mb-4">
-                    <i data-lucide="zap" size="14"></i>
-                    <span>江苏大学 Eagles Lab 技术社区</span>
-                </div>
-                <h2 class="text-3xl md:text-5xl font-black mb-4">
-                    技术交流 · 共同成长
-                </h2>
-                <p class="text-lg text-white/80 max-w-2xl mx-auto mb-8">
-                    这里是 Eagles Lab 的技术交流空间，专注网安、运维、面试、大厂等方向。<br>
-                    分享你的面试经验，探讨行业形势，共同成长。
-                </p>
-                <div class="flex flex-wrap justify-center gap-3">
-                    <button onclick="showNewPostModal()" class="px-6 py-3 rounded-xl bg-white text-brand-600 font-bold hover:bg-white/90 transition-all shadow-lg hover:shadow-xl hover:scale-[1.02]">
-                        <i data-lucide="plus" size="16" class="inline mr-2"></i>
-                        发布帖子
-                    </button>
-                    <button onclick="document.getElementById('posts-section').scrollIntoView({behavior: 'smooth'})" class="px-6 py-3 rounded-xl bg-white/20 backdrop-blur-sm text-white font-bold hover:bg-white/30 transition-all">
-                        <i data-lucide="arrow-down" size="16" class="inline mr-2"></i>
-                        浏览帖子
-                    </button>
+        <!-- Hero Section - 高级设计 -->
+        <div class="relative mb-12 overflow-hidden">
+            <!-- 背景装饰 -->
+            <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 rounded-3xl"></div>
+            <div class="absolute inset-0 opacity-30">
+                <div class="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+                <div class="absolute bottom-0 right-0 w-80 h-80 bg-purple-500 rounded-full blur-3xl translate-x-1/3 translate-y-1/3"></div>
+                <div class="absolute top-1/2 left-1/2 w-64 h-64 bg-cyan-500 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+            </div>
+            <!-- 网格装饰 -->
+            <div class="absolute inset-0 opacity-10" style="background-image: linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px); background-size: 50px 50px;"></div>
+
+            <div class="relative z-10 p-10 md:p-16">
+                <div class="flex flex-col lg:flex-row items-center gap-10">
+                    <!-- 左侧内容 -->
+                    <div class="flex-1 text-center lg:text-left">
+                        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-sm font-bold text-white/90 mb-6">
+                            <div class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></div>
+                            <span>Eagles Lab · 英格科技</span>
+                        </div>
+                        <h1 class="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight">
+                            技术交流<br>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">共同成长</span>
+                        </h1>
+                        <p class="text-lg md:text-xl text-white/70 max-w-xl mb-8 leading-relaxed">
+                            专注网安、运维、面经、大厂、形势讨论<br>
+                            分享面试经验，探讨行业趋势，一起进步
+                        </p>
+                        <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
+                            <button onclick="showNewPostModal()" class="px-8 py-4 rounded-2xl bg-white text-slate-900 font-bold hover:bg-white/90 transition-all shadow-2xl shadow-white/20 hover:shadow-white/30 hover:scale-[1.02] text-sm">
+                                <i data-lucide="plus" size="18" class="inline mr-2"></i>
+                                发布帖子
+                            </button>
+                            <button onclick="document.getElementById('posts-section').scrollIntoView({behavior: 'smooth'})" class="px-8 py-4 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 text-white font-bold hover:bg-white/20 transition-all text-sm">
+                                <i data-lucide="compass" size="18" class="inline mr-2"></i>
+                                探索内容
+                            </button>
+                        </div>
+                    </div>
+                    <!-- 右侧统计卡片 -->
+                    <div class="grid grid-cols-2 gap-4 w-full lg:w-auto">
+                        <div class="p-5 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 text-center min-w-[140px]">
+                            <div class="text-3xl font-black text-white mb-1" id="stat-posts-hero">-</div>
+                            <div class="text-xs text-white/60 font-bold uppercase tracking-wider">帖子</div>
+                        </div>
+                        <div class="p-5 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 text-center min-w-[140px]">
+                            <div class="text-3xl font-black text-white mb-1" id="stat-users-hero">-</div>
+                            <div class="text-xs text-white/60 font-bold uppercase tracking-wider">用户</div>
+                        </div>
+                        <div class="p-5 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 text-center min-w-[140px]">
+                            <div class="text-3xl font-black text-white mb-1">6</div>
+                            <div class="text-xs text-white/60 font-bold uppercase tracking-wider">板块</div>
+                        </div>
+                        <div class="p-5 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 text-center min-w-[140px]">
+                            <div class="flex items-center justify-center gap-2 mb-1">
+                                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                                <span class="text-3xl font-black text-white" id="online-count-hero">-</span>
+                            </div>
+                            <div class="text-xs text-white/60 font-bold uppercase tracking-wider">在线</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Category Cards -->
-        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3 mb-10" id="category-cards">
-            <!-- 板块卡片由 JavaScript 动态生成 -->
+        <!-- 板块快捷入口 - 现代设计 -->
+        <div class="mb-10">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-1 h-6 rounded-full bg-gradient-to-b from-blue-500 to-cyan-500"></div>
+                <h3 class="text-lg font-black text-zinc-900 dark:text-white">板块分类</h3>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4" id="category-cards">
+                <!-- 板块卡片由 JavaScript 动态生成 -->
+            </div>
         </div>
 
         <!-- Toolbar -->
@@ -944,7 +1000,7 @@
         // 从 Firestore 加载自定义板块
         async function loadCategories() {
             try {
-                const catDoc = await db.collection('itlab_settings').doc('categories').get();
+                const catDoc = await db.collection('eagle_settings').doc('categories').get();
                 if (catDoc.exists) {
                     const customCats = catDoc.data();
                     CATEGORIES = { ...DEFAULT_CATEGORIES, ...customCats };
@@ -954,27 +1010,42 @@
             }
         }
 
-        // 渲染主页板块卡片
+        // 渲染主页板块卡片 - 高级设计
         function renderCategoryCards() {
             const container = document.getElementById('category-cards');
             if (!container) return;
 
+            const categoryIcons = {
+                all: { icon: 'layers', gradient: 'from-blue-600 to-cyan-600' },
+                security: { icon: 'shield', gradient: 'from-red-500 to-orange-500' },
+                devops: { icon: 'settings', gradient: 'from-amber-500 to-yellow-500' },
+                interview: { icon: 'file-text', gradient: 'from-emerald-500 to-teal-500' },
+                bigtech: { icon: 'building', gradient: 'from-blue-500 to-indigo-500' },
+                situation: { icon: 'trending-up', gradient: 'from-violet-500 to-purple-500' },
+                other: { icon: 'message-circle', gradient: 'from-slate-500 to-gray-500' }
+            };
+
             let html = `
-                <button onclick="filterByCategory('all')" class="category-card p-4 rounded-2xl bg-white dark:bg-zinc-900 border-2 border-blue-500 shadow-lg shadow-blue-500/10 text-center transition-all hover:scale-[1.02]" data-cat="all">
-                    <div class="w-10 h-10 rounded-xl bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center mx-auto mb-2">
-                        <i data-lucide="grid-3x3" size="20" class="text-blue-500"></i>
+                <button onclick="filterByCategory('all')" class="group relative overflow-hidden rounded-2xl bg-gradient-to-br ${categoryIcons.all.gradient} p-[1px] hover:scale-[1.02] transition-all duration-300 shadow-lg hover:shadow-xl" data-cat="all">
+                    <div class="relative flex flex-col items-center gap-3 p-5 rounded-[15px] bg-white dark:bg-zinc-900 h-full">
+                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br ${categoryIcons.all.gradient} flex items-center justify-center shadow-lg">
+                            <i data-lucide="${categoryIcons.all.icon}" size="22" class="text-white"></i>
+                        </div>
+                        <span class="text-sm font-bold text-zinc-900 dark:text-white">全部</span>
                     </div>
-                    <span class="text-xs font-bold text-blue-600 dark:text-blue-400">全部</span>
                 </button>
             `;
 
             Object.entries(CATEGORIES).forEach(([id, cat]) => {
+                const iconConfig = categoryIcons[id] || { icon: cat.icon, gradient: 'from-gray-500 to-slate-500' };
                 html += `
-                    <button onclick="filterByCategory('${id}')" class="category-card p-4 rounded-2xl bg-white dark:bg-zinc-900 border-2 border-transparent hover:border-${cat.color}-500 shadow-sm hover:shadow-lg hover:shadow-${cat.color}-500/10 text-center transition-all hover:scale-[1.02]" data-cat="${id}">
-                        <div class="w-10 h-10 rounded-xl bg-${cat.color}-100 dark:bg-${cat.color}-900/30 flex items-center justify-center mx-auto mb-2">
-                            <i data-lucide="${cat.icon}" size="20" class="text-${cat.color}-500"></i>
+                    <button onclick="filterByCategory('${id}')" class="group relative overflow-hidden rounded-2xl bg-gradient-to-br ${iconConfig.gradient} p-[1px] hover:scale-[1.02] transition-all duration-300 shadow-lg hover:shadow-xl" data-cat="${id}">
+                        <div class="relative flex flex-col items-center gap-3 p-5 rounded-[15px] bg-white dark:bg-zinc-900 h-full">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br ${iconConfig.gradient} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                                <i data-lucide="${cat.icon}" size="22" class="text-white"></i>
+                            </div>
+                            <span class="text-sm font-bold text-zinc-900 dark:text-white">${cat.name}</span>
                         </div>
-                        <span class="text-xs font-bold">${cat.name}</span>
                     </button>
                 `;
             });
@@ -1041,7 +1112,7 @@
                     }
                 } catch (e) {}
 
-                await db.collection('itlab_users').doc(user.uid).set({
+                await db.collection('eagle_users').doc(user.uid).set({
                     displayName: user.displayName || user.email.split('@')[0],
                     email: user.email,
                     photoURL: user.photoURL,
@@ -1108,7 +1179,7 @@
                 await currentUser.updateProfile({ displayName: newUsername });
 
                 // 更新 Firestore 用户文档
-                await db.collection('itlab_users').doc(currentUser.uid).update({
+                await db.collection('eagle_users').doc(currentUser.uid).update({
                     displayName: newUsername,
                     updatedAt: firebase.firestore.FieldValue.serverTimestamp()
                 });
@@ -1138,7 +1209,7 @@
             document.getElementById('weather-widget').classList.remove('hidden');
 
             // 从本地缓存加载
-            const cached = localStorage.getItem('itlab_weather');
+            const cached = localStorage.getItem('eagle_weather');
             if (cached) {
                 try {
                     const { data, time, city } = JSON.parse(cached);
@@ -1201,7 +1272,7 @@
                 weatherCache = weatherData;
                 weatherCacheTime = Date.now();
 
-                localStorage.setItem('itlab_weather', JSON.stringify({
+                localStorage.setItem('eagle_weather', JSON.stringify({
                     data: weatherData,
                     time: Date.now(),
                     city: city,
@@ -1351,7 +1422,7 @@
         async function loadAdminSettings() {
             try {
                 // 加载设置
-                const settingsDoc = await db.collection('itlab_settings').doc('general').get();
+                const settingsDoc = await db.collection('eagle_settings').doc('general').get();
                 if (settingsDoc.exists) {
                     const settings = settingsDoc.data();
                     document.getElementById('setting-require-invite').checked = settings.requireInviteCode || false;
@@ -1368,7 +1439,7 @@
                 renderCategoriesList();
 
                 // 加载用户列表
-                const usersSnapshot = await db.collection('itlab_users').orderBy('lastSeen', 'desc').limit(50).get();
+                const usersSnapshot = await db.collection('eagle_users').orderBy('lastSeen', 'desc').limit(50).get();
                 const usersList = document.getElementById('users-list');
 
                 if (usersSnapshot.empty) {
@@ -1454,7 +1525,7 @@
 
                 for (let i = 0; i < count; i++) {
                     const code = generateRandomCode(8);
-                    const ref = db.collection('itlab_invitations').doc(code);
+                    const ref = db.collection('eagle_invitations').doc(code);
                     batch.set(ref, {
                         code,
                         isUsed: false,
@@ -1490,7 +1561,7 @@
 
         async function toggleUserAdmin(userId, currentIsAdmin) {
             try {
-                await db.collection('itlab_users').doc(userId).update({
+                await db.collection('eagle_users').doc(userId).update({
                     isAdmin: !currentIsAdmin,
                     updatedAt: firebase.firestore.FieldValue.serverTimestamp()
                 });
@@ -1556,7 +1627,7 @@
                 CATEGORIES[id] = { name, color: randomColor, icon: randomIcon };
 
                 // 保存到 Firestore
-                await db.collection('itlab_settings').doc('categories').set({
+                await db.collection('eagle_settings').doc('categories').set({
                     [id]: { name, color: randomColor, icon: randomIcon }
                 }, { merge: true });
 
@@ -1581,7 +1652,7 @@
                 delete CATEGORIES[id];
 
                 // 从 Firestore 删除
-                await db.collection('itlab_settings').doc('categories').update({
+                await db.collection('eagle_settings').doc('categories').update({
                     [id]: firebase.firestore.FieldValue.delete()
                 });
 
@@ -1601,7 +1672,7 @@
                     if (cb.checked) selectedCategories.push(cb.value);
                 });
 
-                await db.collection('itlab_users').doc(userId).update({
+                await db.collection('eagle_users').doc(userId).update({
                     modCategories: selectedCategories,
                     updatedAt: firebase.firestore.FieldValue.serverTimestamp()
                 });
@@ -1615,7 +1686,7 @@
 
         async function toggleUserModerator(userId, currentIsMod) {
             try {
-                await db.collection('itlab_users').doc(userId).update({
+                await db.collection('eagle_users').doc(userId).update({
                     isModerator: !currentIsMod,
                     updatedAt: firebase.firestore.FieldValue.serverTimestamp()
                 });
@@ -1631,7 +1702,7 @@
             const chatEnabled = document.getElementById('setting-chat-enabled').checked;
 
             try {
-                await db.collection('itlab_settings').doc('general').set({
+                await db.collection('eagle_settings').doc('general').set({
                     requireInviteCode: requireInvite,
                     postPermission,
                     chatEnabled,
@@ -1664,7 +1735,7 @@
                 return;
             }
             try {
-                const userDoc = await db.collection('itlab_users').doc(currentUser.uid).get();
+                const userDoc = await db.collection('eagle_users').doc(currentUser.uid).get();
                 if (userDoc.exists) {
                     const data = userDoc.data();
                     userRoles.isAdmin = data.isAdmin || false;
@@ -1854,7 +1925,7 @@
             if (!isEditing) {
                 // 检查发帖权限
                 try {
-                    const settingsDoc = await db.collection('itlab_settings').doc('general').get();
+                    const settingsDoc = await db.collection('eagle_settings').doc('general').get();
                     if (settingsDoc.exists) {
                         const settings = settingsDoc.data();
                         const postPermission = settings.postPermission || 'all';
@@ -1893,7 +1964,7 @@
             try {
                 if (isEditing) {
                     // 编辑模式：更新帖子
-                    await db.collection('itlab_posts').doc(editingPostId).update({
+                    await db.collection('eagle_posts').doc(editingPostId).update({
                         title, content, category: selectedCategory, tags,
                         lastEditedAt: firebase.firestore.FieldValue.serverTimestamp(),
                         lastEditedBy: currentUser.uid
@@ -1902,7 +1973,7 @@
                     alert('帖子已更新');
                 } else {
                     // 新建模式：创建帖子
-                    await db.collection('itlab_posts').add({
+                    await db.collection('eagle_posts').add({
                         title, content, category: selectedCategory, tags,
                         authorId: currentUser.uid,
                         authorName: currentUser.displayName || currentUser.email.split('@')[0],
@@ -1971,7 +2042,7 @@
 
             try {
                 // 只使用单字段排序，避免复合索引问题
-                let query = db.collection('itlab_posts');
+                let query = db.collection('eagle_posts');
 
                 switch (currentSort) {
                     case 'newest': query = query.orderBy('createdAt', 'desc'); break;
@@ -2035,50 +2106,84 @@
             if (posts.length === 0 && replace) {
                 container.innerHTML = `
                     <div class="text-center py-20">
-                        <div class="w-20 h-20 rounded-2xl bg-zinc-100 dark:bg-white/5 flex items-center justify-center mx-auto mb-4">
-                            <i data-lucide="message-square" size="32" class="text-zinc-300 dark:text-zinc-700"></i>
+                        <div class="w-24 h-24 rounded-3xl bg-gradient-to-br from-blue-100 to-cyan-100 dark:from-blue-900/30 dark:to-cyan-900/30 flex items-center justify-center mx-auto mb-6">
+                            <i data-lucide="inbox" size="40" class="text-blue-400"></i>
                         </div>
-                        <p class="text-zinc-500 font-bold mb-2">暂无帖子</p>
-                        <p class="text-zinc-400 text-sm">快来分享你的见解吧！</p>
+                        <p class="text-xl font-bold text-zinc-700 dark:text-zinc-300 mb-2">暂无帖子</p>
+                        <p class="text-zinc-400 mb-6">快来分享你的见解吧！</p>
+                        <button onclick="showNewPostModal()" class="px-6 py-3 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-bold text-sm hover:shadow-lg transition-all">
+                            <i data-lucide="plus" size="16" class="inline mr-2"></i>
+                            发布第一篇帖子
+                        </button>
                     </div>
                 `;
                 lucide.createIcons();
                 return;
             }
 
+            const categoryGradients = {
+                security: 'from-red-500 to-orange-500',
+                devops: 'from-amber-500 to-yellow-500',
+                interview: 'from-emerald-500 to-teal-500',
+                bigtech: 'from-blue-500 to-indigo-500',
+                situation: 'from-violet-500 to-purple-500',
+                other: 'from-slate-500 to-gray-500'
+            };
+
             const html = posts.map(post => {
                 const cat = CATEGORIES[post.category] || CATEGORIES.other;
                 const timeAgo = getTimeAgo(post.createdAt?.toDate());
                 const isLiked = currentUser && post.likedBy?.includes(currentUser.uid);
+                const gradient = categoryGradients[post.category] || 'from-slate-500 to-gray-500';
 
                 return `
-                    <div class="group bg-white dark:bg-zinc-900/50 rounded-2xl border border-zinc-200 dark:border-white/5 hover:border-brand-300 dark:hover:border-brand-700 hover:shadow-xl hover:shadow-brand-500/5 transition-all cursor-pointer" onclick="showPostDetail('${post.id}')">
-                        <div class="p-5 md:p-6">
+                    <div class="group relative bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-200/80 dark:border-white/5 hover:border-blue-300 dark:hover:border-blue-700 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-300 cursor-pointer overflow-hidden" onclick="showPostDetail('${post.id}')">
+                        <!-- 顶部装饰条 -->
+                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${gradient} opacity-0 group-hover:opacity-100 transition-opacity"></div>
+
+                        <div class="p-6">
                             <div class="flex items-start gap-4">
-                                <img src="${post.authorAvatar}" alt="" class="w-11 h-11 rounded-xl flex-shrink-0 object-cover">
+                                <!-- 头像 -->
+                                <div class="relative flex-shrink-0">
+                                    <img src="${post.authorAvatar}" alt="" class="w-12 h-12 rounded-xl object-cover ring-2 ring-zinc-100 dark:ring-white/10">
+                                    ${post.isPinned ? '<div class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-amber-400 flex items-center justify-center"><i data-lucide="pin" size="10" class="text-white"></i></div>' : ''}
+                                </div>
+
                                 <div class="flex-1 min-w-0">
-                                    <div class="flex items-center gap-2 mb-2.5 flex-wrap">
-                                        ${post.isPinned ? '<span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-amber-100 text-amber-600 dark:bg-amber-900/30 dark:text-amber-400 border border-amber-200 dark:border-amber-800">📌 置顶</span>' : ''}
-                                        ${post.isFeatured ? '<span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-brand-100 text-brand-600 dark:bg-brand-900/30 dark:text-brand-400 border border-brand-200 dark:border-brand-800">⭐ 精华</span>' : ''}
-                                        <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-${cat.color}-100 text-${cat.color}-600 dark:bg-${cat.color}-900/30 dark:text-${cat.color}-400">${cat.name}</span>
+                                    <!-- 标签行 -->
+                                    <div class="flex items-center gap-2 mb-3 flex-wrap">
+                                        ${post.isFeatured ? '<span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-gradient-to-r from-amber-400 to-orange-400 text-white">精华</span>' : ''}
+                                        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-gradient-to-r ${gradient} text-white">${cat.name}</span>
                                     </div>
-                                    <h3 class="text-base font-bold mb-2 group-hover:text-brand-500 transition-colors line-clamp-2">${post.title}</h3>
-                                    <p class="text-sm text-zinc-500 dark:text-zinc-400 line-clamp-2 mb-3 leading-relaxed">${getPreviewText(post.content)}</p>
+
+                                    <!-- 标题 -->
+                                    <h3 class="text-lg font-bold mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors line-clamp-2 leading-snug">${post.title}</h3>
+
+                                    <!-- 预览 -->
+                                    <p class="text-sm text-zinc-500 dark:text-zinc-400 line-clamp-2 mb-4 leading-relaxed">${getPreviewText(post.content)}</p>
+
+                                    <!-- 标签 -->
                                     ${post.tags && post.tags.length > 0 ? `
-                                        <div class="flex flex-wrap gap-1.5 mb-3">
-                                            ${post.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                                        <div class="flex flex-wrap gap-2 mb-4">
+                                            ${post.tags.map(tag => `<span class="px-2.5 py-1 rounded-lg text-[11px] font-medium bg-zinc-100 dark:bg-white/5 text-zinc-600 dark:text-zinc-400 border border-zinc-200 dark:border-white/10">${tag}</span>`).join('')}
                                         </div>
                                     ` : ''}
-                                    <div class="flex items-center gap-5 text-xs text-zinc-400">
-                                        <span class="font-medium text-zinc-600 dark:text-zinc-300">${post.authorName}</span>
-                                        <span>${timeAgo}</span>
-                                        <div class="flex items-center gap-1.5 ${isLiked ? 'text-red-500' : ''}">
-                                            <i data-lucide="heart" size="13" class="${isLiked ? 'fill-current' : ''}"></i>
-                                            <span>${post.likes || 0}</span>
+
+                                    <!-- 底部信息 -->
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center gap-3">
+                                            <span class="text-xs font-bold text-zinc-700 dark:text-zinc-300">${post.authorName}</span>
+                                            <span class="text-xs text-zinc-400">${timeAgo}</span>
                                         </div>
-                                        <div class="flex items-center gap-1.5">
-                                            <i data-lucide="message-square" size="13"></i>
-                                            <span>${post.commentCount || 0}</span>
+                                        <div class="flex items-center gap-4 text-xs text-zinc-400">
+                                            <div class="flex items-center gap-1.5 ${isLiked ? 'text-red-500' : 'hover:text-red-400'} transition-colors">
+                                                <i data-lucide="heart" size="14" class="${isLiked ? 'fill-current' : ''}"></i>
+                                                <span class="font-medium">${post.likes || 0}</span>
+                                            </div>
+                                            <div class="flex items-center gap-1.5 hover:text-blue-400 transition-colors">
+                                                <i data-lucide="message-square" size="14"></i>
+                                                <span class="font-medium">${post.commentCount || 0}</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -2113,7 +2218,7 @@
             lucide.createIcons();
 
             try {
-                const postDoc = await db.collection('itlab_posts').doc(postId).get();
+                const postDoc = await db.collection('eagle_posts').doc(postId).get();
                 if (!postDoc.exists) { contentDiv.innerHTML = '<div class="text-center py-20 text-red-400">帖子不存在</div>'; return; }
 
                 const post = postDoc.data();
@@ -2123,7 +2228,7 @@
                 document.getElementById('detail-title').textContent = post.title;
 
                 // 使用单字段查询，客户端排序
-                const commentsSnapshot = await db.collection('itlab_comments').where('postId', '==', postId).get();
+                const commentsSnapshot = await db.collection('eagle_comments').where('postId', '==', postId).get();
                 let comments = [];
                 commentsSnapshot.forEach(doc => { comments.push({ id: doc.id, ...doc.data() }); });
                 // 客户端按时间排序
@@ -2348,7 +2453,7 @@
 
             try {
                 // 检查聊天室是否开启
-                const settingsDoc = await db.collection('itlab_settings').doc('general').get();
+                const settingsDoc = await db.collection('eagle_settings').doc('general').get();
                 const chatEnabled = settingsDoc.exists && settingsDoc.data().chatEnabled;
 
                 if (!chatEnabled) {
@@ -2380,7 +2485,7 @@
 
             try {
                 // 检查用户是否有聊天权限
-                const userDoc = await db.collection('itlab_users').doc(currentUser.uid).get();
+                const userDoc = await db.collection('eagle_users').doc(currentUser.uid).get();
                 if (userDoc.exists) {
                     const userData = userDoc.data();
                     // 管理员和版主自动有权限
@@ -2396,11 +2501,11 @@
                 }
 
                 // 检查是否有聊天邀请码
-                const accessDoc = await db.collection('itlab_chat_access').doc(currentUser.uid).get();
+                const accessDoc = await db.collection('eagle_chat_access').doc(currentUser.uid).get();
                 if (accessDoc.exists) {
                     hasChatAccess = true;
                     // 更新用户文档
-                    await db.collection('itlab_users').doc(currentUser.uid).update({
+                    await db.collection('eagle_users').doc(currentUser.uid).update({
                         chatAuthorized: true
                     });
                     return true;
@@ -2424,7 +2529,7 @@
 
             // 检查聊天室是否开启
             try {
-                const settingsDoc = await db.collection('itlab_settings').doc('general').get();
+                const settingsDoc = await db.collection('eagle_settings').doc('general').get();
                 if (!settingsDoc.exists || !settingsDoc.data().chatEnabled) {
                     alert('聊天室暂时关闭，请稍后再试');
                     return;
@@ -2473,7 +2578,7 @@
 
             try {
                 // 检查邀请码
-                const inviteDoc = await db.collection('itlab_invitations').doc(code).get();
+                const inviteDoc = await db.collection('eagle_invitations').doc(code).get();
 
                 if (!inviteDoc.exists) {
                     errorDiv.textContent = '邀请码不存在';
@@ -2497,21 +2602,21 @@
                 }
 
                 // 标记邀请码已使用
-                await db.collection('itlab_invitations').doc(code).update({
+                await db.collection('eagle_invitations').doc(code).update({
                     isUsed: true,
                     usedBy: currentUser.uid,
                     usedAt: firebase.firestore.FieldValue.serverTimestamp()
                 });
 
                 // 授权用户聊天权限
-                await db.collection('itlab_chat_access').doc(currentUser.uid).set({
+                await db.collection('eagle_chat_access').doc(currentUser.uid).set({
                     userId: currentUser.uid,
                     authorizedAt: firebase.firestore.FieldValue.serverTimestamp(),
                     usedCode: code
                 });
 
                 // 更新用户文档
-                await db.collection('itlab_users').doc(currentUser.uid).update({
+                await db.collection('eagle_users').doc(currentUser.uid).update({
                     chatAuthorized: true
                 });
 
@@ -2535,7 +2640,7 @@
             const messagesDiv = document.getElementById('chat-messages');
 
             try {
-                const snapshot = await db.collection('itlab_chat_messages')
+                const snapshot = await db.collection('eagle_chat_messages')
                     .orderBy('createdAt', 'desc')
                     .limit(50)
                     .get();
@@ -2567,7 +2672,7 @@
         function subscribeToChatMessages() {
             if (chatUnsubscribe) chatUnsubscribe();
 
-            chatUnsubscribe = db.collection('itlab_chat_messages')
+            chatUnsubscribe = db.collection('eagle_chat_messages')
                 .orderBy('createdAt', 'desc')
                 .limit(50)
                 .onSnapshot(snapshot => {
@@ -2628,7 +2733,7 @@
             }
 
             try {
-                await db.collection('itlab_chat_messages').add({
+                await db.collection('eagle_chat_messages').add({
                     userId: currentUser.uid,
                     userName: currentUser.displayName || currentUser.email.split('@')[0],
                     userAvatar: currentUser.photoURL || `https://ui-avatars.com/api/?name=${encodeURIComponent(currentUser.displayName || currentUser.email)}&background=10b981&color=fff`,
@@ -2660,7 +2765,7 @@
 
         async function editPost(postId) {
             try {
-                const postDoc = await db.collection('itlab_posts').doc(postId).get();
+                const postDoc = await db.collection('eagle_posts').doc(postId).get();
                 if (!postDoc.exists) { alert('帖子不存在'); return; }
 
                 const post = postDoc.data();
@@ -2711,7 +2816,7 @@
             if (!confirm('确定要删除这个帖子吗？此操作不可恢复！')) return;
 
             try {
-                const postDoc = await db.collection('itlab_posts').doc(postId).get();
+                const postDoc = await db.collection('eagle_posts').doc(postId).get();
                 if (!postDoc.exists) { alert('帖子不存在'); return; }
 
                 const post = postDoc.data();
@@ -2721,10 +2826,10 @@
                 }
 
                 // 删除帖子
-                await db.collection('itlab_posts').doc(postId).delete();
+                await db.collection('eagle_posts').doc(postId).delete();
 
                 // 删除相关评论
-                const commentsSnapshot = await db.collection('itlab_comments').where('postId', '==', postId).get();
+                const commentsSnapshot = await db.collection('eagle_comments').where('postId', '==', postId).get();
                 const batch = db.batch();
                 commentsSnapshot.forEach(doc => batch.delete(doc.ref));
                 await batch.commit();
@@ -2739,7 +2844,7 @@
 
         async function togglePin(postId) {
             try {
-                const postDoc = await db.collection('itlab_posts').doc(postId).get();
+                const postDoc = await db.collection('eagle_posts').doc(postId).get();
                 if (!postDoc.exists) { alert('帖子不存在'); return; }
 
                 const post = postDoc.data();
@@ -2748,7 +2853,7 @@
                     return;
                 }
 
-                await db.collection('itlab_posts').doc(postId).update({
+                await db.collection('eagle_posts').doc(postId).update({
                     isPinned: !post.isPinned
                 });
 
@@ -2761,7 +2866,7 @@
 
         async function toggleFeatured(postId) {
             try {
-                const postDoc = await db.collection('itlab_posts').doc(postId).get();
+                const postDoc = await db.collection('eagle_posts').doc(postId).get();
                 if (!postDoc.exists) { alert('帖子不存在'); return; }
 
                 const post = postDoc.data();
@@ -2770,7 +2875,7 @@
                     return;
                 }
 
-                await db.collection('itlab_posts').doc(postId).update({
+                await db.collection('eagle_posts').doc(postId).update({
                     isFeatured: !postDoc.data().isFeatured
                 });
 
@@ -2822,7 +2927,7 @@
             likeLocks.add(postId);
 
             try {
-                const postRef = db.collection('itlab_posts').doc(postId);
+                const postRef = db.collection('eagle_posts').doc(postId);
 
                 // 使用事务确保数据一致性
                 await db.runTransaction(async (transaction) => {
@@ -2886,8 +2991,8 @@
                     commentData.replyTo = replyingTo.authorName;
                 }
 
-                await db.collection('itlab_comments').add(commentData);
-                await db.collection('itlab_posts').doc(currentPostId).update({ commentCount: firebase.firestore.FieldValue.increment(1) });
+                await db.collection('eagle_comments').add(commentData);
+                await db.collection('eagle_posts').doc(currentPostId).update({ commentCount: firebase.firestore.FieldValue.increment(1) });
 
                 // 清除追评状态
                 replyingTo = null;
@@ -2906,7 +3011,7 @@
             }
 
             try {
-                await db.collection('itlab_comments').doc(commentId).update({
+                await db.collection('eagle_comments').doc(commentId).update({
                     isPinned: !currentPinned
                 });
                 showPostDetail(currentPostId);
@@ -2920,7 +3025,7 @@
             if (!confirm('确定要删除这条评论吗？')) return;
 
             try {
-                const commentDoc = await db.collection('itlab_comments').doc(commentId).get();
+                const commentDoc = await db.collection('eagle_comments').doc(commentId).get();
                 if (!commentDoc.exists) { alert('评论不存在'); return; }
 
                 const comment = commentDoc.data();
@@ -2933,10 +3038,10 @@
                 }
 
                 // 删除评论
-                await db.collection('itlab_comments').doc(commentId).delete();
+                await db.collection('eagle_comments').doc(commentId).delete();
 
                 // 删除该评论的所有追评
-                const repliesSnapshot = await db.collection('itlab_comments')
+                const repliesSnapshot = await db.collection('eagle_comments')
                     .where('parentId', '==', commentId)
                     .get();
                 const batch = db.batch();
@@ -2945,7 +3050,7 @@
 
                 // 更新帖子评论数
                 const totalDeleted = 1 + repliesSnapshot.size;
-                await db.collection('itlab_posts').doc(postId).update({
+                await db.collection('eagle_posts').doc(postId).update({
                     commentCount: firebase.firestore.FieldValue.increment(-totalDeleted)
                 });
 
@@ -3017,13 +3122,29 @@
 
         async function loadStats() {
             try {
-                const postsSnapshot = await db.collection('itlab_posts').get();
-                document.getElementById('total-posts').textContent = postsSnapshot.size;
-            } catch (e) {}
+                const postsSnapshot = await db.collection('eagle_posts').get();
+                const postsCount = postsSnapshot.size;
+                document.getElementById('total-posts').textContent = postsCount;
+                // 更新 Hero 区域统计
+                const heroPosts = document.getElementById('stat-posts-hero');
+                if (heroPosts) heroPosts.textContent = postsCount;
+
+                // 用户数
+                const usersSnapshot = await db.collection('eagle_users').get();
+                const usersCount = usersSnapshot.size;
+                const heroUsers = document.getElementById('stat-users-hero');
+                if (heroUsers) heroUsers.textContent = usersCount;
+            } catch (e) {
+                console.warn('Failed to load stats:', e);
+            }
         }
 
         function updateOnlineCount() {
-            document.getElementById('online-count').textContent = Math.floor(Math.random() * 20) + 5;
+            const count = Math.floor(Math.random() * 20) + 5;
+            document.getElementById('online-count').textContent = count;
+            // 更新 Hero 区域在线数
+            const heroOnline = document.getElementById('online-count-hero');
+            if (heroOnline) heroOnline.textContent = count;
         }
 
         document.addEventListener('DOMContentLoaded', async () => {
